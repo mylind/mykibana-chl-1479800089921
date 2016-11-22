@@ -34,8 +34,8 @@ module.exports = () => Joi.object({
   server: Joi.object({
     uuid: Joi.string().guid().default(),
     name: Joi.string().default(os.hostname()),
-    host: Joi.string().hostname().default('localhost'),
-    port: Joi.number()['default'](parseInt(process.env.VCAP_APP_PORT,10) || 5601),
+    host: Joi.string().hostname()['default']('0.0.0.0'),
+    port: Joi.number()['default'](parseInt(process.env.VCAP_APP_PORT, 10) || 5601),
     maxPayloadBytes: Joi.number().default(1048576),
     autoListen: Joi.boolean().default(true),
     defaultRoute: Joi.string().default('/app/kibana').regex(/^\//, `start with a slash`),
