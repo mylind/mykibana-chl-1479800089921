@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 1024M
+  instances: 1
+  domain: mybluemix.net
+  name: mykibana-chl
+  host: mykibana-chl
+  disk_quota: 1024M
+  command: node src/cli
+  services:
+  - Compose for Elasticsearch-o9
