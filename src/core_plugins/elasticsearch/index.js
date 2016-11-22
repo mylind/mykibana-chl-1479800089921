@@ -26,6 +26,7 @@ module.exports = function ({ Plugin }) {
       }
 
       console.log("CHL TEST elasticsearchUri: " + elasticsearchUri);
+      console.log("CHL TEST PORT: " + process.env.VCAP_APP_PORT);
 
       return object({
         enabled: boolean().default(true),
