@@ -169,7 +169,7 @@ module.exports = function (program) {
 
 function logFatal(message, server) {
   if (server) {
-    server.log(['fatal'], message);
+    console.log(['fatal'], message);
   }
   console.error('FATAL', message);
 }
